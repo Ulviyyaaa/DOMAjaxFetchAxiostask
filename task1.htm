@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="number">
+    <input type="text" id="name">
+    <input type="text" id="surname">
+    <button id="add">Add list item</button>
+
+    <div id="netice">
+        <p>Id Name Surname</p>
+    </div>
+<script>
+    const number=document.getElementById("number")
+    const name=document.getElementById("name")
+    const surname=document.getElementById("surname")
+    const netice =document.getElementById("netice")
+    const add=document.getElementById("add")
+
+    add.addEventListener('click', function(){
+        let p=document.createElement('p')
+            netice.appendChild(p)
+
+            p.innerHTML=number.value + '  ' +name.value + "  " + surname.value
+    })
+</script>
+</body>
+</html>
